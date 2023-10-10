@@ -62,7 +62,7 @@ const cy = cytoscape({
         classes: "transition",
       },
       {
-        data: { id: "e11", source: "q8", target: "q10", label: "b" },
+        data: { id: "e11", source: "q8", target: "q10", label: "a" },
         classes: "transition",
       },
       {
