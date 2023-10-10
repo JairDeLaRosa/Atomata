@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+  }
+
+  .aside {
+    background-color: #222;
+    width: 30%;
+    font-weight: bold;
+    color: white;
+  }
+
+  #cy {
+    border: solid 2px green;
+    width: 70%;
+    height: 600px;
+  }
+  #resultDiv {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Estilo para resultado "aceptado" */
+  .bg-aceptado {
+    background-color: green;
+    color: white;
+  }
+
+  /* Estilo para resultado "rechazado" */
+  .bg-rechazado {
+    background-color: red;
+    color: white;
+  }
