@@ -32,3 +32,15 @@ body {
     background-color: red;
     color: white;
   }
+  .accepted {
+    background-color: blue; /* Fondo verde */
+    border-color: green; /* Borde verde */
+    color: white; /* Texto blanco */
+  }
+  
+  /* Estilos para nodos rechazados */
+  .rejected {
+    background-color: red; /* Fondo rojo */
+    border-color: red; /* Borde rojo */
+    color: white; /* Texto blanco */
+  }

@@ -32,7 +32,6 @@
   <body>
     <div class="container-fluid d-flex gap-2">
       <div class="col-9" id="cy"></div>
-
       <div class="col-3 p-0" class="aside d-flex flex-column">
         <div class="col mb-2">
           <label style="color: white; font-weight: bold"
@@ -69,37 +68,14 @@
 
     <script src="scripts/Cytoscape.js"></script>
     <script src="scripts/validation.js"></script>
+    <script src="scripts/InputPassword.js"></script>
     <script>
-      document
-        .getElementById("validateButton")
-        .addEventListener("click", function () {
-          const inputWord = document.getElementById("inputWord").value;
-          const validar = new Validation();
-          const respuesta = validar.validate(inputWord);
+    
+     
+     
 
-          const resultDiv = document.getElementById("resultDiv");
-
-          if (respuesta === -1) {
-            resultDiv.textContent = "Palabra rechazada";
-            resultDiv.className = "bg-rechazado";
-          } else {
-            resultDiv.textContent = "Palabra aceptada";
-            resultDiv.className = "bg-aceptado";
-          }
-          if (resultDiv.textContent == "Palabra aceptada") {
-            const acceptedWordsTextarea =
-              document.getElementById("acceptedWords");
-            acceptedWordsTextarea.value += inputWord + "\n"; 
-          }
-        });
-
-      document
-        .getElementById("inputWord")
-        .addEventListener("input", function () {
-          const resultDiv = document.getElementById("resultDiv");
-          resultDiv.textContent = ""; // Limpiar contenido
-          resultDiv.className = ""; // Eliminar la clase de fondo
-        });
+      // Actualiza los estilos
+      cy.style().update();
     </script>
   </body>
 </html>
