@@ -4,7 +4,7 @@ document
     const inputWord = document.getElementById("inputWord").value;
     const validar = new Validation();
     const respuesta = validar.validate(inputWord);
-
+    const speed = document.getElementById('speed').value*10
     const resultDiv = document.getElementById("resultDiv");
 
     if (respuesta === -1) {
@@ -31,7 +31,7 @@ document
       cy.$(`#q${estadoActual}`).style({ color: "blue" });
       setTimeout(function () {
         simularRecorrido(i + 1);
-      }, 1000); // Cambia el tiempo de espera según tus preferencias
+      }, speed); // Cambia el tiempo de espera según tus preferencias
     }
 
     // Comienza la simulación desde el primer estado (estado 0)
