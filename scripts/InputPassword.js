@@ -1,6 +1,7 @@
 document
   .getElementById("validateButton")
   .addEventListener("click", function () {
+    const isAccepted = new Audio()
     const inputWord = document.getElementById("inputWord").value;
     const validar = new Validation();
     const respuesta = validar.validate(inputWord);
