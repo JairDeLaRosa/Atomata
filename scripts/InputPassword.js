@@ -1,7 +1,8 @@
 document
   .getElementById("validateButton")
   .addEventListener("click", function () {
-    const isAccepted = new Audio()
+    const isAccepted = new Audio('./audios/word_accepted.mp3')
+    const isNotAccepted = new Audio('./audios/word_reject.mp3')
     const inputWord = document.getElementById("inputWord").value;
     const validar = new Validation();
     const respuesta = validar.validate(inputWord);
@@ -11,9 +12,11 @@ document
     if (respuesta === -1) {
       resultDiv.textContent = "Palabra rechazada";
       resultDiv.className = "bg-rechazado";
+      isNotAccepted.play()
     } else {
       resultDiv.textContent = "Palabra aceptada";
       resultDiv.className = "bg-aceptado";
+      isAccepted.play()
     }
     if (resultDiv.textContent == "Palabra aceptada") {
       const acceptedWordsTextarea = document.getElementById("acceptedWords");
