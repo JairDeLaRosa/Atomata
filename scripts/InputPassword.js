@@ -1,3 +1,6 @@
+
+
+
 document
   .getElementById("validateButton")
   .addEventListener("click", function () {
@@ -12,10 +15,15 @@ document
     if (respuesta === -1) {
       resultDiv.textContent = "Palabra rechazada";
       resultDiv.className = "bg-rechazado";
+      resultDiv.textContent = i18next.t('wordNotAccept');
+
+      
       isNotAccepted.play()
     } else {
       resultDiv.textContent = "Palabra aceptada";
       resultDiv.className = "bg-aceptado";
+      resultDiv.textContent = i18next.t('wordAccept');
+
       isAccepted.play()
     }
     if (resultDiv.textContent == "Palabra aceptada") {
