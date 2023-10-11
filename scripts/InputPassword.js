@@ -19,20 +19,16 @@ document
       acceptedWordsTextarea.value += inputWord + "\n";
     }
 
-
+    //animacion con css
     const estados = validar.arrayStates;
     function simularRecorrido(i) {
       if (i > estados.length) {
         return;
       }
-    
+
       const estadoActual = estados[i];
-
       cy.nodes().style({ color: "white" });
-
-      // Cambia el color del nodo correspondiente al estado actual a azul
       cy.$(`#q${estadoActual}`).style({ color: "blue" });
-
       setTimeout(function () {
         simularRecorrido(i + 1);
       }, 1000); // Cambia el tiempo de espera según tus preferencias

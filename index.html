@@ -32,8 +32,23 @@
   <body>
     <div class="container-fluid d-flex gap-2">
       <div class="col-9" id="cy"></div>
-      <div class="col-3 p-0" class="aside d-flex flex-column">
-        <div class="col mb-2">
+      <div
+        class="col-3 p-0"
+        class="aside d-flex flex-column"
+        style="border: 2px solid green"
+      >
+        <div class="mt-1 font-weight-bold">
+          <div style="border-radius: 3px; font-weight: bold" class="bg-success text-center">
+            <h2>a(bba U ba)^4</h2>
+          </div>
+          <div class="pl-2">
+            <label class="form-label text-white">Speed animation:</label>
+            <br />
+            <input type="range" class="form-range" />
+          </div>
+        </div>
+        <hr class="bg-success" />
+        <div class="col pl-2">
           <label style="color: white; font-weight: bold"
             >Ingresa tu palabra:</label
           >
@@ -52,7 +67,7 @@
             Validar
           </button>
         </div>
-        <div class="col">
+        <div class="col pl-2">
           <textarea
             name=""
             id="acceptedWords"
@@ -69,13 +84,6 @@
     <script src="scripts/Cytoscape.js"></script>
     <script src="scripts/validation.js"></script>
     <script src="scripts/InputPassword.js"></script>
-    <script>
-    
-     
-     
-
-      // Actualiza los estilos
-      cy.style().update();
-    </script>
+    <script></script>
   </body>
 </html>
